@@ -9,7 +9,7 @@ const path = require("path");
 const port = 8000;
 
 mongoose.connect(
- "mongodb://localhost/writer",
+ "mongodb://localhost/way2clinic",
  { useNewUrlParser: true },
  function(err, connection) {
   if (err) throw err;
@@ -30,7 +30,7 @@ app.use(
   secret: "writer",
   resave: true,
   saveUninitialized: true,
-  store: new MongoStore({ url: "mongodb://localhost/writer-session" })
+  store: new MongoStore({ url: "mongodb://localhost/way2clinic-session" })
  })
 );
 
@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(cors());
 
-app.use("/api", require("./server/routes/api"));
+app.use("/api", require("./server/routes/api/v1"));
 app.use("/doctor", require('./server/routes/doctor'));
 
 app.use(require("./server/routes/index"));

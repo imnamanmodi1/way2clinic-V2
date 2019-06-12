@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import 'bulma'
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Doclogin from './Doclogin';
 
@@ -10,7 +9,7 @@ class Header extends Component {
     <div classNameName="App">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <a className="navbar-item" href="/">
             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
           </a>
           <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -21,7 +20,7 @@ class Header extends Component {
         </div>
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">
+            <a href='/' className="navbar-item">
               Home
       </a>
             <a className="navbar-item">
@@ -55,12 +54,9 @@ class Header extends Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a href='/doctor/login' className="button is-light">
+                <a href='/doctor/login' className="button is-success">
                   Log in
-          </a>
+            </a>
               </div>
             </div>
           </div>
