@@ -6,6 +6,10 @@ router.get('/login', (err, res)=>{
   res.render('index');
 })
 
+router.get('/register', (err, res)=>{
+  res.render('index');
+})
+
 router.post('/register', docController.create);
 router.post('/authenticate', docController.authenticate);
 

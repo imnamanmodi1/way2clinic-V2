@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Doclogin from './Doclogin';
+import DocRegister from './DocRegister';
 
 class Header extends Component {
   render() {
@@ -26,8 +27,8 @@ class Header extends Component {
             <a className="navbar-item">
               Documentation
       </a>
-      <a className="navbar-item">
-              Doctors
+      <a href='/doctor/register' className="navbar-item">
+              Register
       </a>
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">
@@ -66,6 +67,7 @@ class Header extends Component {
     </div>
     <Router>
       <Route path='/doctor/login' component={Doclogin} />
+      {/* <Route path='/doctor/register' component={DocRegister} /> */}
     </Router>
     </div>
     );
