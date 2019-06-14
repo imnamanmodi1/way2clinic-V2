@@ -17,6 +17,10 @@ var doctorSchema = new Schema({
         type: String,
         required: true,
     },
+    college:{
+        type: String,
+        // required: true,
+    },
     degree:{
         type: String,
         //required: true,

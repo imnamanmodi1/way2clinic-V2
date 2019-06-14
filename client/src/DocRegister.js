@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Bulma.scss';
-import './DocRegister.scss'
+import './DocRegister.scss';
 
 class DocRegister extends Component {
     render() {
