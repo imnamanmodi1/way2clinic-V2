@@ -5,14 +5,13 @@ import './DocRegister.scss';
 class DocRegister extends Component {
     render() {
         return (
-            <>
+            <form method="POST" action='/doctor/register'>
                 <div className='doc-register'>
                     <h3 className='tch title is-4'>Register Yourself</h3>
-                    {/* <p class="tch subtitle is-5">Login Here</p> */}
                     <div className="field">
-                        <label className="label">Username</label>
+                        <label className="label">Name</label>
                         <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" type="text" placeholder="Text input" />
+                            <input className="input is-success" type="text" name="name" placeholder="Doctor's Full Name" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-user" />
                             </span>
@@ -24,7 +23,7 @@ class DocRegister extends Component {
                     <div className="field">
                         <label className="label">Email</label>
                         <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" type="email" placeholder="Email input" />
+                            <input className="input is-success" name="email" type="email" placeholder="Email input" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope" />
                             </span>
@@ -35,11 +34,12 @@ class DocRegister extends Component {
                     <div className="field">
                         <label className="label">Password</label>
                         <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" type="password" placeholder="Enter your password" />
+                            <input className="input is-success" name="password" type="password" placeholder="Enter your password" />
                             <span className="icon is-small is-left">
-                                <i className="fas fa-envelope" />
+                                <i className="fas fa-lock" />
                             </span>
-                            <span className="icon is-small is-right">                        </span>
+                            <span className="icon is-small is-right">
+                            </span>
                         </div>
                     </div>
                     <div className="field">
@@ -51,7 +51,7 @@ class DocRegister extends Component {
                         </div>
                     </div>
                     <div className="field">
-                        <div className="control">
+                        {/* <div className="control">
                             <label className="radio">
                                 <input type="radio" name="question" />
                                 Yes
@@ -60,7 +60,7 @@ class DocRegister extends Component {
                                 <input type="radio" name="question" />
                                 No
                   </label>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="field is-grouped">
                         <div className="control">
@@ -71,9 +71,7 @@ class DocRegister extends Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                </div>
-            </>
+            </form>
         );
     }
 }

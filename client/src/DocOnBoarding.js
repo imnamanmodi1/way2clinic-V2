@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './Bulma.scss';
 import './DocRegister.scss'
 
-class DocProfile extends Component {
+class DocOnBoarding extends Component {
     render() {
         return (
             <div>
@@ -108,4 +108,4 @@ class DocProfile extends Component {
     }
 }
 
-export default DocProfile;
+export default DocOnBoarding;
