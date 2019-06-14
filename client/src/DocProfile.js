@@ -13,7 +13,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">Full Name</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <input className="input is-success" type="text" placeholder="Enter Full  Name" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user" />
                                 </span>
@@ -22,7 +22,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">College</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="email" placeholder="Email input" />
+                                <input className="input is-success" type="text" placeholder="Your College Name" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-envelope" />
                                 </span>
@@ -31,7 +31,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">Degree</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="email" placeholder="Enter your password" />
+                                <input className="input is-success" type="text" placeholder="Your College Degree" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-envelope" />
                                 </span>
@@ -40,7 +40,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">Specialisation</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <input className="input is-success" type="text" placeholder="Your Specialisation" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user" />
                                 </span>
@@ -49,7 +49,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">Medical Registration Number</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <input className="input is-success" type="text" placeholder="Your License Number" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user" />
                                 </span>
@@ -58,7 +58,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">Clinic Address</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <input className="input is-success" type="text" placeholder="Your Clinic Address" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user" />
                                 </span>
@@ -67,7 +67,7 @@ class DocProfile extends Component {
                         <div className="field">
                             <label className="label">City</label>
                             <div className="control has-icons-left has-icons-right">
-                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <input className="input is-success" type="text" placeholder="Your City" />
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-user" />
                                 </span>
