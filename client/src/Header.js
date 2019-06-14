@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import Doclogin from './Doclogin';
 import DocRegister from './DocRegister';
+import DocOnBoarding from './DocOnBoarding';
 import Search from '../components/SearchBar';
 
 class Header extends Component {
@@ -74,6 +75,8 @@ class Header extends Component {
           <div>
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
+            <Route path='/doctor/onboarding' component={DocOnBoarding} />
+
           </div>
         </Router>
       </div>
