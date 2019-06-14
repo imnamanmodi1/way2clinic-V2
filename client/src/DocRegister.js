@@ -23,25 +23,22 @@ class DocRegister extends Component {
                 <div className="field">
                     <label className="label">Email</label>
                     <div className="control has-icons-left has-icons-right">
-                        <input className="input is-danger" type="email" placeholder="Email input" />
+                        <input className="input is-success" type="email" placeholder="Email input" />
                         <span className="icon is-small is-left">
                             <i className="fas fa-envelope" />
                         </span>
                         <span className="icon is-small is-right">
-                            <i className="fas fa-exclamation-triangle" />
                         </span>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Password</label>
                     <div className="control has-icons-left has-icons-right">
-                        <input className="input is-danger" type="email" placeholder="Enter your password" />
+                        <input className="input is-success" type="password" placeholder="Enter your password" />
                         <span className="icon is-small is-left">
                             <i className="fas fa-envelope" />
                         </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-exclamation-triangle" />
-                        </span>
+                        <span className="icon is-small is-right">                        </span>
                     </div>
                 </div>
                 <div className="field">
