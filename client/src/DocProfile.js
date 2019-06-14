@@ -5,121 +5,104 @@ import './DocRegister.scss'
 class DocProfile extends Component {
     render() {
         return (
-            <div className='doc-register'>
-                <h3 className='tch title is-4'>Register Yourself</h3>
-                {/* <p class="tch subtitle is-5">Login Here</p> */}
-                <div className="field">
-                    <label className="label">Full Name</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-success" type="text" placeholder="Text input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-check" />
-                        </span>
+            <div>
+                <form action="" method="post">
+                    <div className='doc-register'>
+                        <h3 className='tch title is-4'>Input Doctor Details</h3>
+                        {/* <p class="tch subtitle is-5">Login Here</p> */}
+                        <div className="field">
+                            <label className="label">Full Name</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">College</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="email" placeholder="Email input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-envelope" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Degree</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="email" placeholder="Enter your password" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-envelope" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Specialisation</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Medical Registration Number</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Clinic Address</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">City</label>
+                            <div className="control has-icons-left has-icons-right">
+                                <input className="input is-success" type="text" placeholder="Text input" />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <div className="control">
+                                <label className="checkbox">
+                                    <input type="checkbox" />
+                                    I agree to the <a href="#">terms and conditions</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <div className="control">
+                                <label className="radio">
+                                    <input type="radio" name="question" />
+                                    Yes
+                                                                     </label>
+                                <label className="radio">
+                                    <input type="radio" name="question" />
+                                    No
+                                                         </label>
+                            </div>
+                        </div>
+                        <div className="field is-grouped">
+                            <div className="control">
+                                <button className="button is-link">Submit</button>
+                            </div>
+                            <div className="control">
+                                <button className="button is-text">Cancel</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div className="field">
-                    <label className="label">College</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-danger" type="email" placeholder="Email input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-envelope" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-exclamation-triangle" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Degree</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-danger" type="email" placeholder="Enter your password" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-envelope" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-exclamation-triangle" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Specialisation</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-success" type="text" placeholder="Text input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-check" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Medical Registration Number</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-success" type="text" placeholder="Text input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-check" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">Clinic Address</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-success" type="text" placeholder="Text input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-check" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <label className="label">City</label>
-                    <div className="control has-icons-left has-icons-right">
-                        <input className="input is-success" type="text" placeholder="Text input" />
-                        <span className="icon is-small is-left">
-                            <i className="fas fa-user" />
-                        </span>
-                        <span className="icon is-small is-right">
-                            <i className="fas fa-check" />
-                        </span>
-                    </div>
-                </div>
-                <div className="field">
-                    <div className="control">
-                        <label className="checkbox">
-                            <input type="checkbox" />
-                            I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                </div>
-                <div className="field">
-                    <div className="control">
-                        <label className="radio">
-                            <input type="radio" name="question" />
-                            Yes
-                  </label>
-                        <label className="radio">
-                            <input type="radio" name="question" />
-                            No
-                  </label>
-                    </div>
-                </div>
-                <div className="field is-grouped">
-                    <div className="control">
-                        <button className="button is-link">Submit</button>
-                    </div>
-                    <div className="control">
-                        <button className="button is-text">Cancel</button>
-                    </div>
-                </div>
+                </form>
             </div>
         );
     }
