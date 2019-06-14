@@ -3,23 +3,13 @@ const router = express.Router();
 const docController = require('../controller/doctor');
 
 
-// handles doctor's login GET
-// router.get('/login', (err, res)=>{
-//   res.render('index');
-// })
-
-// // handles doctor's register GET
-// router.get('/register', (err, res)=>{
-//   res.render('index');
-// })
-
-// // handles doctor's onBoarding GET
-// router.get('/onboarding', (err, res)=>{
-//   res.render('index');
-// })
-
+router.get('/onboarding', docController.verifyToken, (req,res) => {
+  res.render('index')
+})
 
 router.post('/register', docController.create); //POST
 router.post('/authenticate', docController.authenticate); //POST
+router.post('/onboarding', docController.verifyToken,docController.onboarding); //POST
+
 
 module.exports =router;
