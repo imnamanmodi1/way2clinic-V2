@@ -14,10 +14,10 @@ class Doclogin extends Component {
           <p className="control has-icons-left has-icons-right">
             <label for="email">Email</label>
             <input className="input" type="email" name="email" placeholder="Email" />
-            <span className="icon is-small is-left">
+            <span className="icon fix is-small is-left">
               <i className="fas fa-envelope" />
             </span>
-            <span className="icon is-small is-right">
+            <span className="icon fix is-small is-right">
               <i className="fas fa-check" />
             </span>
           </p>
@@ -26,7 +26,7 @@ class Doclogin extends Component {
           <p className="control has-icons-left">
             <label for="password">Password</label>
             <input className="input" type="password" name="password" placeholder="Password" />
-            <span className="icon is-small is-left">
+            <span className="icon fix is-small is-left">
               <i className="fas fa-lock" />
             </span>
           </p>
