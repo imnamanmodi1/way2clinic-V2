@@ -1,7 +1,6 @@
 import React from 'react';
 import './Bulma.scss';
 import Header from './Header'
-import DocProfile from './DocProfile'
 // import DocLogin from './Doclogin'
 // import { Route, Link, BrowserRouter } from 'react-router-dom';
 
