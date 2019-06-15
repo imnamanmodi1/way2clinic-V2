@@ -68,7 +68,9 @@ module.exports = {
    },
 
 
-
+   logout: function(req,res,next) {
+      res.redirect(301, "http://localhost:8000/")
+   },
 
    //handles authentication on login form for Doctor POST
    authenticate: function (req, res, next) {
@@ -87,7 +89,7 @@ module.exports = {
             // console.log(userInfo, 'this is userinfo')
             if (bcrypt.compareSync(req.body.password, userInfo.password)) {
                const token = jwt.sign({ id: userInfo._id}, module.exports.secret, { expiresIn: '1h' });
-               res.cookie('jwtToken', token, { maxAge: 3600000, httpOnly: true });
+               res.cookie('jwtToken', token, { maxAge: 3600000 });
                if (!userInfo.degree || !userInfo.specialisation || !userInfo.medicalId || !userInfo.clinicAddress){
                   res.redirect(301, '/doctor/onboarding')
                }

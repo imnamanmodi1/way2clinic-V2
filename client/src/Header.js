@@ -8,8 +8,68 @@ import Search from '../components/SearchBar';
 import ReachDoctorCard from './ReachDoctorCard';
 import DoctorProfile from './DoctorProfile';
 
+function LoginButton(props) {
+  return (
+    <div className="buttons">
+      <a href='/doctor/register' className="button is-light">
+        Register
+    </a>
+      <a onClick={props.onClick} href='/doctor/login' className="button is-success">
+        Log in
+    </a>
+    </div>
+  );
+}
+
+function LogoutButton(props) {
+  return (
+    <div className="buttons">
+      <a onClick={props.onClick} href='/doctor/logout' className="button is-danger">
+        Logout
+      </a>
+    </div>
+  );
+}
+
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = { isLoggedIn: false };
+  }
+
+  handleLoginClick() {
+    this.setState({ isLoggedIn: true });
+  }
+
+  handleLogoutClick() {
+    console.log('inside logout')
+    console.log(cookie,'this is cookie')
+    this.delete_cookie('jwtToken')
+    console.log(cookie,'this is cookie after logout')
+    this.setState({ isLoggedIn: false });
+  }
+
+  delete_cookie(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    console.log('cookie is cleared')
+  };
+
+
   render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button
+    var cookie = document.cookie;
+    cookie = cookie.split('=')
+    if (cookie[0] === "jwtToken") {
+      button = <LogoutButton onClick={this.handleLogoutClick} />
+    } else {
+      button = <LoginButton onClick={this.handleLoginClick} />
+    }
+
+
+
     return (
       <div>
         <div classNameName="App">
@@ -60,14 +120,7 @@ class Header extends Component {
 
               <div className="navbar-end">
                 <div className="navbar-item">
-                  <div className="buttons">
-                    <a href='/doctor/register' className="button is-light">
-                      Register
-                    </a>
-                    <a href='/doctor/login' className="button is-success">
-                      Log in
-                    </a>
-                  </div>
+                  {button}
                 </div>
               </div>
             </div>
