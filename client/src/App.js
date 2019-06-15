@@ -12,7 +12,7 @@ function App() {
     <>
       <Header />,
       {/* <DocOnBoarding /> */}
-      <DoctorProfile />
+      {/* <DoctorProfile /> */}
       <Footer />
     </>
   )
