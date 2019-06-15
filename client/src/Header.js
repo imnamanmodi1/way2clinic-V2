@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import Clinic from '../public/download.png';
 import Doclogin from './Doclogin';
 import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
 import Search from '../components/SearchBar';
+import ReachDoctorCard from './ReachDoctorCard';
+import DoctorProfile from './DoctorProfile';
 
 function LoginButton(props) {
   return (
@@ -73,7 +76,7 @@ class Header extends Component {
           <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                <img src={Clinic} style={{maxHeight: '3rem'}} />
               </a>
               <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -97,8 +100,8 @@ class Header extends Component {
                     More
                   </a>
                   <div className="navbar-dropdown">
-                    <a className="navbar-item">
-                      About
+                    <a href='/doctor/profile' className="navbar-item">
+                      Profile
                     </a>
                     <a className="navbar-item">
                       Jobs
@@ -126,10 +129,11 @@ class Header extends Component {
 
         <Router>
           <div>
+            <Route exact path='/' component={ReachDoctorCard} />
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />
-
+            <Route exact path='/doctor/profile' component={DoctorProfile} />
           </div>
         </Router>
       </div>

@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import './Bulma.scss'
 import './Doc-Card.scss'
+import DocAvatar from '../public/doctor-avatar.jpg';
+
 
 
 class DoctorProfile extends Component {
     render() {
         return (
-            <div className="card doc-card">
+            <div className="card doc-card border-card">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-left">
                             <figure className="image is-48x48">
-                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" />
+                                <img src={DocAvatar} alt="Placeholder image" />
                             </figure>
                         </div>
                         <div className="media-content">
@@ -33,7 +35,7 @@ class DoctorProfile extends Component {
                                 , 'experience as a specialist'
                             </span>
                             </div>
-                           <div className='media-content'>
+                           <div className='media-content license-box'>
                                <p className='subtitle is-6'>
                                <i class="fas fa-check-circle"></i>
                                    <span>
@@ -49,7 +51,7 @@ class DoctorProfile extends Component {
                            </div>
                         </div>
                     </div>
-                    <div className="content">
+                    <div className="content margin">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Phasellus nec iaculis mauris. <a>@bulmaio</a>.
             <a href="#">#css</a> <a href="#">#responsive</a>
