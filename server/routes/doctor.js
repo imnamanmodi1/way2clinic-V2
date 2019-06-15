@@ -7,6 +7,8 @@ router.get('/onboarding', docController.verifyToken, (req,res) => {
   res.render('index')
 })
 
+router.get('/logout', docController.logout)
+
 router.post('/register', docController.create); //POST
 router.post('/authenticate', docController.authenticate); //POST
 router.post('/onboarding', docController.verifyToken,docController.onboarding); //POST
