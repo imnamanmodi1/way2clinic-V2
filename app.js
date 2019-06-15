@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser')
 const cors = require("cors");
 const path = require("path");
 const port = 8000;
@@ -17,6 +18,7 @@ mongoose.connect(
  }
 )
 
+app.use(cookieParser())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
