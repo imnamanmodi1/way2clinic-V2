@@ -5,6 +5,7 @@ import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
 import Search from '../components/SearchBar';
 import ReachDoctorCard from './ReachDoctorCard';
+import DoctorProfile from './DoctorProfile';
 
 class Header extends Component {
   render() {
@@ -38,8 +39,8 @@ class Header extends Component {
                     More
                   </a>
                   <div className="navbar-dropdown">
-                    <a className="navbar-item">
-                      About
+                    <a href='/doctor/profile' className="navbar-item">
+                      Profile
                     </a>
                     <a className="navbar-item">
                       Jobs
@@ -78,7 +79,7 @@ class Header extends Component {
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />
-
+            <Route exact path='/doctor/profile' component={DoctorProfile} />
           </div>
         </Router>
       </div>
