@@ -16,9 +16,6 @@ class DocOnBoarding extends Component {
                             <span className="icon is-small is-left">
                                 <i className="fas fa-user" />
                             </span>
-                            <span className="icon is-small is-right">
-                                <i className="fas fa-check" />
-                            </span>
                         </div>
                     </div>
                     <div className="field">
@@ -27,9 +24,6 @@ class DocOnBoarding extends Component {
                             <input name="specialisation" className="input is-success" type="text" placeholder="Ex: Physician" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope" />
-                            </span>
-                            <span className="icon is-small is-right">
-                                <i className="fas fa-exclamation-triangle" />
                             </span>
                         </div>
                     </div>
@@ -40,9 +34,6 @@ class DocOnBoarding extends Component {
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope" />
                             </span>
-                            <span className="icon is-small is-right">
-                                <i className="fas fa-exclamation-triangle" />
-                            </span>
                         </div>
                     </div>
                     <div className="field">
@@ -51,9 +42,6 @@ class DocOnBoarding extends Component {
                             <input name="clinicAddress" className="input is-success" type="text" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-user" />
-                            </span>
-                            <span className="icon is-small is-right">
-                                <i className="fas fa-check" />
                             </span>
                         </div>
                         <div className="boxes"></div>
