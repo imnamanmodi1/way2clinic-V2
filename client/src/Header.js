@@ -4,6 +4,7 @@ import Doclogin from './Doclogin';
 import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
 import Search from '../components/SearchBar';
+import ReachDoctorCard from './ReachDoctorCard';
 
 class Header extends Component {
   render() {
@@ -73,6 +74,7 @@ class Header extends Component {
 
         <Router>
           <div>
+            <Route exact path='/' component={ReachDoctorCard} />
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />

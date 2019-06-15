@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import './Bulma.scss'
-// import './Doc-Card.scss'
+import './Bulma.scss';
+import DocAvatar from '../public/doctor-avatar.jpg';
+import './Doc-Card.scss'
 
 
 class ReachDoctorCard extends Component {
@@ -8,9 +9,9 @@ class ReachDoctorCard extends Component {
         return (
             <div className='columns'>
             <div className='column'>
-            <div className="card doc-card columns">
+            <div className="card align doc-card columns">
                <div className="column">
-                   <img src="" alt=""/>
+                   <img src={DocAvatar} alt=""/>
                </div>
                <div className="column">
                    <a href="http://">Dr. Naman Modi</a>
@@ -24,7 +25,7 @@ class ReachDoctorCard extends Component {
                    <p><i class="fas fa-thumbs-up"></i>   96%</p>
                    <p>A160 Mayur vihar</p>
                    <p>Patola chauk, Pune</p>
-                   <p>400</p>
+                   <p><i class="fas fa-rupee-sign"></i>400</p>
                    <p>Mon-Sat</p>
                    <p>8:00 AM-9:00 Pm</p>
                    <button className="button is-success">Call Now</button>
@@ -32,9 +33,9 @@ class ReachDoctorCard extends Component {
             </div>
             </div>
             <div className='column'>
-            <div className="card doc-card columns">
+            <div className="card align doc-card columns">
                <div className="column">
-                   <img src="" alt=""/>
+                   <img src={DocAvatar} alt=""/>
                </div>
                <div className="column">
                    <a href="http://">Dr. Naman Modi</a>
@@ -48,7 +49,7 @@ class ReachDoctorCard extends Component {
                    <p><i class="fas fa-thumbs-up"></i>   96%</p>
                    <p>A160 Mayur vihar</p>
                    <p>Patola chauk, Pune</p>
-                   <p>400</p>
+                   <p><i class="fas fa-rupee-sign"></i>400</p>
                    <p>Mon-Sat</p>
                    <p>8:00 AM-9:00 Pm</p>
                    <button className="button is-success">Call Now</button>

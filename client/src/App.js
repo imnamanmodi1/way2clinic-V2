@@ -14,7 +14,7 @@ function App() {
       <Header />,
       {/* <DocOnBoarding /> */}
       {/* <DoctorProfile /> */}
-      <ReachDoctorCard />
+      {/* <ReachDoctorCard /> */}
       <Footer />
     </>
   )
