@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './Bulma.scss';
-import './DocLogin.scss';
+import '../src/Bulma.scss'
+
+import './styles/DocLogin.scss';
 
 
 class Doclogin extends Component {

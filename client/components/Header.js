@@ -4,7 +4,7 @@ import Clinic from '../public/download.png';
 import Doclogin from './Doclogin';
 import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
-import Search from '../components/SearchBar';
+import Search from './SearchBar';
 import ReachDoctorCard from './ReachDoctorCard';
 import DoctorProfile from './DoctorProfile';
 

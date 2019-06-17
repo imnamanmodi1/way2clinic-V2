@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import './Bulma.scss';
-import './DocOnBoarding.scss'
+import '../src/Bulma.scss'
+import './styles/DocOnBoarding.scss'
 
 class DocOnBoarding extends Component {
     render() {

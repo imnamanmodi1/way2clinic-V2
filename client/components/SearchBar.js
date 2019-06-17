@@ -1,5 +1,6 @@
 import React from 'react';
-import '../src/Bulma.scss';
+import '../src/Bulma.scss'
+
 import '../components/styles/SearchBar.scss';
 
 
