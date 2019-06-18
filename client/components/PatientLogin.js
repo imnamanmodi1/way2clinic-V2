@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import '../src/Bulma.scss'
 
-import './styles/DocLogin.scss';
+import './styles/PatientLogin.scss';
 
 
-class Doclogin extends Component {
+class Patientlogin extends Component {
   render() {
     return (
-      <div className='doc-login'>
-        <h3 className='tch title is-4'>Are You A Doctor?</h3>
+      <div className='pat-login'>
+        <h3 className='tch title is-4'>User/Patient Login</h3>
         <p class="tch subtitle is-5">Login Here</p>
-        <form method='POST' action='/doctor/authenticate' className="measure center">
+        <form method='POST' action='/patient/authenticate' className="measure center">
         <div className="field">
           <p className="control has-icons-left has-icons-right">
             <label for="email">Email</label>
@@ -41,8 +41,8 @@ class Doclogin extends Component {
         </div>
         <div className="field">
           <p className="control">
-            <a  href = "/patient/login" className="center">
-              Not a Doctor? Login Here!
+            <a  href = "/doctor/login" className="center">
+              Are you a doctor? Login Here!
           </a>
           </p>
         </div>
@@ -52,4 +52,4 @@ class Doclogin extends Component {
   }
 }
 
-export default Doclogin;
+export default Patientlogin;
