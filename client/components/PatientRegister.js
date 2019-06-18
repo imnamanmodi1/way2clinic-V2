@@ -36,7 +36,7 @@ class PatientRegister extends Component {
                         <div className="control has-icons-left has-icons-right">
                             <input className="input is-success" name="mobileNumber" type="tel" placeholder="7049505508" />
                             <span className="icon is-small is-left">
-                                <i className="fas fa-envelope" />
+                                <i className="fas fa-mobile" />
                             </span>
                             <span className="icon is-small is-right">
                             </span>

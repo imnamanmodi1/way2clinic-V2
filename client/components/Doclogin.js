@@ -1,70 +1,48 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import '../src/Bulma.scss'
 
-import './styles/DocRegister.scss';
+import './styles/DocLogin.scss';
 
-class DocRegister extends Component {
-    render() {
-        return (
-            <form method="POST" action='/doctor/register'>
-                <div className='doc-register'>
-                    <h3 className='tch title is-4'>Register Yourself</h3>
-                    <div className="field">
-                        <label className="label">Name</label>
-                        <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" type="text" name="name" placeholder="Doctor's Full Name" />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-user" />
-                            </span>
-                            <span className="icon is-small is-right">
-                                <i className="fas fa-check" />
-                            </span>
-                        </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Email</label>
-                        <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" name="email" type="email" placeholder="Email input" />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope" />
-                            </span>
-                            <span className="icon is-small is-right">
-                            </span>
-                        </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Password</label>
-                        <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" name="password" type="password" placeholder="Enter your password" />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-lock" />
-                            </span>
-                            <span className="icon is-small is-right">
-                            </span>
-                        </div>
-                    </div>
-                    <div className="field">
-                        <div className="control">
-                            <label className="checkbox">
-                                <input type="checkbox" />
-                                I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div className="field">
-                    </div>
-                    <div className="field is-grouped">
-                        <div className="control">
-                            <button className="button is-link">Submit</button>
-                        </div>
-                        <div className="control">
-                            <button className="button is-text">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        );
-    }
+
+class Doclogin extends Component {
+  render() {
+    return (
+      <div className='doc-login'>
+        <h3 className='tch title is-4'>Are You A Doctor?</h3>
+        <p class="tch subtitle is-5">Login Here</p>
+        <form method='POST' action='/doctor/authenticate' className="measure center">
+        <div className="field">
+          <p className="control has-icons-left has-icons-right">
+            <label for="email">Email</label>
+            <input className="input" type="email" name="email" placeholder="Email" />
+            <span className="icon fix is-small is-left">
+              <i className="fas fa-envelope" />
+            </span>
+            <span className="icon fix is-small is-right">
+              <i className="fas fa-check" />
+            </span>
+          </p>
+        </div>
+        <div className="field">
+          <p className="control has-icons-left">
+            <label for="password">Password</label>
+            <input className="input" type="password" name="password" placeholder="Password" />
+            <span className="icon fix is-small is-left">
+              <i className="fas fa-lock" />
+            </span>
+          </p>
+        </div>
+        <div className="field">
+          <p className="control">
+            <button className="button is-success center">
+              Login
+          </button>
+          </p>
+        </div>
+        </form>
+      </div>
+      );
+  }
 }
 
-export default DocRegister;
+export default Doclogin;
