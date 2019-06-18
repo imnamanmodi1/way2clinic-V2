@@ -43,15 +43,15 @@ module.exports = {
          if (err)
             next(err);
          else
-            res.redirect(301, '/doctor/onboarding')
+            res.redirect('/doctor/login')
 
       });
    },
 
    // handles doctor onboarding process POST
    onboarding: function (req, res, next) {
-      console.log(req.body, "this are main")
-      console.log(req.id, "this is id")
+      // console.log(req.body, "this are main")
+      // console.log(req.id, "this is id")
 
       docModel.findByIdAndUpdate({_id : req.id}, 
          {
@@ -63,13 +63,15 @@ module.exports = {
          (err,doctor)=>{
          console.log(doctor)
          if(err) return next(err);
-         res.redirect('/doctor/dashboard');
+         res.redirect('/');
       })
    },
 
 
    logout: function(req,res,next) {
-      res.redirect(301, "http://localhost:8000/")
+      // res.session.destroy()
+      res.clearCookie('jwtToken')
+      res.redirect("http://localhost:8000/")
    },
 
    //handles authentication on login form for Doctor POST
@@ -82,20 +84,22 @@ module.exports = {
 
       docModel.findOne({ email: emails }, function (err, userInfo) {
          if (err) {
-            res.json({status: "error", message: "user not found"});
+            res.json({status: "error", message: "user exists"});
          }
          else {
-            // var userInfo    = userInfo;
-            // console.log(userInfo, 'this is userinfo')
             if (bcrypt.compareSync(req.body.password, userInfo.password)) {
                const token = jwt.sign({ id: userInfo._id}, module.exports.secret, { expiresIn: '1h' });
-               res.cookie('jwtToken', token, { maxAge: 3600000 });
                if (!userInfo.degree || !userInfo.specialisation || !userInfo.medicalId || !userInfo.clinicAddress){
-                  res.redirect(301, '/doctor/onboarding')
+                  res.cookie('jwtToken', token);
+                  res.header('x-auth-token', token)
+                  res.redirect('/doctor/onboarding')
                }
                else{
                   //do something
-                  res.redirect(301,'/doctor/dashboard');
+                  const domain = 'localhost';
+                  res.cookie('jwtToken', token, { domain: domain, path : '/'});
+                  // res.header('x-auth-token', token)
+                  res.redirect('/');
                   console.log(userInfo.name, 'has completed onboarding')
                }
             } else {
