@@ -39,6 +39,13 @@ class Doclogin extends Component {
           </button>
           </p>
         </div>
+        <div className="field">
+          <p className="control">
+            <a  href = "/patient/login" className="center">
+              Not a Doctor? Login Here!
+          </a>
+          </p>
+        </div>
         </form>
       </div>
       );
