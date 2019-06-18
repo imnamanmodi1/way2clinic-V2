@@ -10,7 +10,7 @@ class Patientlogin extends Component {
       <div className='pat-login'>
         <h3 className='tch title is-4'>User/Patient Login</h3>
         <p class="tch subtitle is-5">Login Here</p>
-        <form method='POST' action='/doctor/authenticate' className="measure center">
+        <form method='POST' action='/patient/authenticate' className="measure center">
         <div className="field">
           <p className="control has-icons-left has-icons-right">
             <label for="email">Email</label>
