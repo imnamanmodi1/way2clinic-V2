@@ -39,6 +39,13 @@ class Patientlogin extends Component {
           </button>
           </p>
         </div>
+        <div className="field">
+          <p className="control">
+            <a  href = "/doctor/login" className="center">
+              Are you a doctor? Login Here!
+          </a>
+          </p>
+        </div>
         </form>
       </div>
       );
