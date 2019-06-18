@@ -1,6 +1,7 @@
 import React,{ Component } from "react";
-import './Bulma.scss';
-import './Footer.scss';
+import '../src/Bulma.scss'
+
+import './styles/Footer.scss';
 
 class Footer extends Component {
     render() {

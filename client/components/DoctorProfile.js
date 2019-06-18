@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import './Bulma.scss'
-import './Doc-Card.scss'
+import '../src/Bulma.scss'
+
+import './styles/Doc-Card.scss'
 import DocAvatar from '../public/doctor-avatar.jpg';
 
 

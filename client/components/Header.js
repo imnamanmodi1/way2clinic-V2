@@ -4,9 +4,14 @@ import Clinic from '../public/download.png';
 import Doclogin from './Doclogin';
 import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
-import Search from '../components/SearchBar';
+import Search from './SearchBar';
 import ReachDoctorCard from './ReachDoctorCard';
 import DoctorProfile from './DoctorProfile'
+import PatientRegister from './PatientRegister';
+import PatientLogin from './PatientLogin';
+
+
+
 import axios from 'axios';
 
 
@@ -145,6 +150,8 @@ class Header extends Component {
         <Router>
           <div>
             <Route exact path='/' component={ReachDoctorCard} />
+            <Route path='/patient/login' component={PatientLogin} />
+            <Route path='/patient/register' component={PatientRegister} />
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import './Bulma.scss';
-import './DocRegister.scss';
+import '../src/Bulma.scss'
+import './styles/PatientRegister.scss';
 
-class DocRegister extends Component {
+class PatientRegister extends Component {
     render() {
         return (
-            <form method="POST" action='/doctor/register'>
-                <div className='doc-register'>
-                    <h3 className='tch title is-4'>Register Yourself</h3>
+            <form method="POST" action='/patient/register'>
+                <div className='pat-register'>
+                    <h3 className='tch title is-4'>Hello User, Kindly Register!</h3>
                     <div className="field">
                         <label className="label">Name</label>
                         <div className="control has-icons-left has-icons-right">
-                            <input className="input is-success" type="text" name="name" placeholder="Doctor's Full Name" />
+                            <input className="input is-success" type="text" name="name" placeholder="User's Full Name" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-user" />
                             </span>
@@ -24,6 +24,17 @@ class DocRegister extends Component {
                         <label className="label">Email</label>
                         <div className="control has-icons-left has-icons-right">
                             <input className="input is-success" name="email" type="email" placeholder="Email input" />
+                            <span className="icon is-small is-left">
+                                <i className="fas fa-envelope" />
+                            </span>
+                            <span className="icon is-small is-right">
+                            </span>
+                        </div>
+                    </div>
+                    <div className="field">
+                        <label className="label">Mobile Number</label>
+                        <div className="control has-icons-left has-icons-right">
+                            <input className="input is-success" name="mobileNumber" type="tel" placeholder="7049505508" />
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope" />
                             </span>
@@ -50,18 +61,6 @@ class DocRegister extends Component {
                             </label>
                         </div>
                     </div>
-                    <div className="field">
-                        {/* <div className="control">
-                            <label className="radio">
-                                <input type="radio" name="question" />
-                                Yes
-                  </label>
-                            <label className="radio">
-                                <input type="radio" name="question" />
-                                No
-                  </label>
-                        </div> */}
-                    </div>
                     <div className="field is-grouped">
                         <div className="control">
                             <button className="button is-link">Submit</button>
@@ -76,4 +75,4 @@ class DocRegister extends Component {
     }
 }
 
-export default DocRegister;
+export default PatientRegister;

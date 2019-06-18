@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import './Bulma.scss';
+import '../src/Bulma.scss'
+import './styles/Doc-Card.scss';
 import DocAvatar from '../public/doctor-avatar.jpg';
-import './Doc-Card.scss'
-var docArr  = []
+var docArr  = [];
 
 
 
