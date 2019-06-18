@@ -11,10 +11,7 @@ var patientSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
-        type: String
-    },
-    mobileNumber:Number,
+    phone:Number,
     password:{
         type: String,
         required: true

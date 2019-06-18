@@ -43,7 +43,7 @@ module.exports = {
          if (err)
             next(err);
          else
-            res.redirect(301, '/doctor/onboarding')
+            res.redirect('/doctor/onboarding')
 
       });
    },

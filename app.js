@@ -55,6 +55,8 @@ app.use(cors());
 
 app.use("/api", require("./server/routes/api/v1"));
 app.use("/doctor", require('./server/routes/doctor'));
+app.use("/patient", require('./server/routes/patient'));
+
 
 app.use(require("./server/routes/index"));
 
