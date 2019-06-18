@@ -6,7 +6,21 @@ import DocRegister from './DocRegister';
 import DocOnBoarding from './DocOnBoarding';
 import Search from './SearchBar';
 import ReachDoctorCard from './ReachDoctorCard';
-import DoctorProfile from './DoctorProfile';
+import DoctorProfile from './DoctorProfile'
+import PatientRegister from './PatientRegister';
+import PatientLogin from './PatientLogin';
+
+
+
+import axios from 'axios';
+
+
+// function   handleLogoutClick() {
+//   console.log('inside logout')
+//   // var cookie = document.cookie;
+//   document.cookie = 'jwtToken' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+//   this.setState({ isLoggedIn: false });
+// }
 
 function LoginButton(props) {
   return (
@@ -43,18 +57,24 @@ class Header extends Component {
     this.setState({ isLoggedIn: true });
   }
 
+  // componentDidMount() {
+  //   axios.post('http://localhost:8000/doctor/authenticate', {
+  //     email: 'modi.naman14@gmail.com',
+  //     password: 'Naman@123',
+  //   })
+  //   .then(function (response) {
+  //     console.log(response.headers);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
+  //   console.log('inside logout')
+  // }
+
   handleLogoutClick() {
-    console.log('inside logout')
-    console.log(cookie,'this is cookie')
-    this.delete_cookie('jwtToken')
-    console.log(cookie,'this is cookie after logout')
+    document.cookie = 'jwtToken' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
     this.setState({ isLoggedIn: false });
   }
-
-  delete_cookie(name) {
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    console.log('cookie is cleared')
-  };
 
 
   render() {
@@ -76,7 +96,7 @@ class Header extends Component {
           <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <img src={Clinic} style={{maxHeight: '3rem'}} />
+                <img src={Clinic} style={{ maxHeight: '3rem' }} />
               </a>
               <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -130,6 +150,8 @@ class Header extends Component {
         <Router>
           <div>
             <Route exact path='/' component={ReachDoctorCard} />
+            <Route path='/patient/login' component={PatientLogin} />
+            <Route path='/patient/register' component={PatientRegister} />
             <Route path='/doctor/login' component={Doclogin} />
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />

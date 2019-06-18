@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../src/Bulma.scss'
 
-import './styles/DocLogin.scss';
+import './styles/PatientLogin.scss';
 
 
-class Doclogin extends Component {
+class Patientlogin extends Component {
   render() {
     return (
-      <div className='doc-login'>
-        <h3 className='tch title is-4'>Are You A Doctor?</h3>
+      <div className='pat-login'>
+        <h3 className='tch title is-4'>User/Patient Login</h3>
         <p class="tch subtitle is-5">Login Here</p>
         <form method='POST' action='/doctor/authenticate' className="measure center">
         <div className="field">
@@ -45,4 +45,4 @@ class Doclogin extends Component {
   }
 }
 
-export default Doclogin;
+export default Patientlogin;

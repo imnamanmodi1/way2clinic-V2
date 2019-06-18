@@ -18,6 +18,11 @@ mongoose.connect(
  }
 )
 
+
+app.use(cors({
+  exposedHeaders: ['x-auth-token'],
+}));
+
 app.use(cookieParser())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -53,9 +58,8 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(cors());
 
-app.use("/api", require("./server/routes/api/v1"));
+app.use("/api/v1", require('./server/routes/api/v1'));
 app.use("/doctor", require('./server/routes/doctor'));
-
 app.use(require("./server/routes/index"));
 
 app.listen(port, () => {
