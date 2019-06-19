@@ -1,3 +1,17 @@
+.mcolumns {
+  float: left;
+  width: 50%;
+  padding: 15px; 
+}
+
+/* Clear floats after the columns */
+.mrows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .doc-card {
   max-width: 40rem;
   height: auto;
