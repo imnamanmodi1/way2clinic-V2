@@ -60,6 +60,8 @@ app.use(cors());
 
 app.use("/api/v1", require('./server/routes/api/v1'));
 app.use("/doctor", require('./server/routes/doctor'));
+app.use("/patient", require('./server/routes/patient'));
+
 app.use(require("./server/routes/index"));
 
 app.listen(port, () => {

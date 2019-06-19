@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-// var Patient = require('../../models/patient');
 var Doctor = require('../../models/Doctor');
+var Patient = require('../../models/Patient')
 
 router.get('/doctors', (req, res, next) => {
   Doctor.find({}, (err, doctors) => {
@@ -10,4 +10,11 @@ router.get('/doctors', (req, res, next) => {
   })
 })
 
-module.exports =router;
+router.get('/patient', (req, res, next)=>{
+  Patient.find({}, (err, patients)=>{
+    if(err) return next(err)
+    res.json({patients: patients})
+  })
+})
+
+module.exports = router;

@@ -9,4 +9,4 @@ router.get('*', (err, res)=>{
 
 
 
-module.exports =router;
+module.exports = router;
