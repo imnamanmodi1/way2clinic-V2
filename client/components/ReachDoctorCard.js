@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import '../src/Bulma.scss'
 import './styles/Doc-Card.scss';
 import DocAvatar from '../public/doctor-avatar.jpg';
+import PractoBanner from '../public/practo-banner.jpg';
 import axios from 'axios'
 const docArr = [];
 
@@ -37,6 +38,15 @@ class ReachDoctorCard extends Component {
   render() {
     return (
       <div>
+          <img className="slider" src={PractoBanner} />
+          <div className="align-icon">
+            <h3 className="heading">Find Top Doctors in Your Area</h3>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+          </div>
           <div className='mrows'>
         {this.state.doctors.map((data, i) => (
             <div className='mcolumns'>

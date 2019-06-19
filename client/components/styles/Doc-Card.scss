@@ -2,6 +2,13 @@
   float: left;
   width: 50%;
   padding: 15px; 
+  // margin-right: 15px;
+}
+
+.mrows{
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 /* Clear floats after the columns */
@@ -40,4 +47,28 @@
 
 .border-card{
   border: 2px solid #aabcf0;;
+}
+
+.slider{
+  display: block;
+  min-width: 1280px;
+  max-height: 280px;
+  margin: auto auto;
+  padding-bottom: 15px;
+  // justify-content: center;
+}
+
+.align-icon{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.yellow{
+  color: rgb(255, 119, 0);
+}
+
+.heading{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
