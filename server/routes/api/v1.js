@@ -6,7 +6,7 @@ var Patient = require('../../models/Patient')
 router.get('/doctors', (req, res, next) => {
   Doctor.find({}, (err, doctors) => {
     if(err) return next(err)
-    res.json({doctors : doctors})
+    res.json(doctors)
   })
 })
 

@@ -9,19 +9,9 @@ import ReachDoctorCard from './ReachDoctorCard';
 import DoctorProfile from './DoctorProfile'
 import PatientRegister from './PatientRegister';
 import PatientLogin from './PatientLogin';
+import axios from 'axios';
 import DocEdit from './DocEdit';
 
-
-
-import axios from 'axios';
-
-
-// function   handleLogoutClick() {
-//   console.log('inside logout')
-//   // var cookie = document.cookie;
-//   document.cookie = 'jwtToken' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-//   this.setState({ isLoggedIn: false });
-// }
 
 function LoginButton(props) {
   return (
@@ -57,20 +47,6 @@ class Header extends Component {
   handleLoginClick() {
     this.setState({ isLoggedIn: true });
   }
-
-  // componentDidMount() {
-  //   axios.post('http://localhost:8000/doctor/authenticate', {
-  //     email: 'modi.naman14@gmail.com',
-  //     password: 'Naman@123',
-  //   })
-  //   .then(function (response) {
-  //     console.log(response.headers);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  //   console.log('inside logout')
-  // }
 
   handleLogoutClick() {
     document.cookie = 'jwtToken' + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
@@ -135,12 +111,13 @@ class Header extends Component {
                       Report an issue
                      </a>
                   </div>
-                  <Search />
+                  {/* <Search /> */}
                 </div>
               </div>
 
               <div className="navbar-end">
                 <div className="navbar-item">
+                  <Search />
                   {button}
                 </div>
               </div>
