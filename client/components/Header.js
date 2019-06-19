@@ -9,6 +9,7 @@ import ReachDoctorCard from './ReachDoctorCard';
 import DoctorProfile from './DoctorProfile'
 import PatientRegister from './PatientRegister';
 import PatientLogin from './PatientLogin';
+import DocEdit from './DocEdit';
 
 
 
@@ -156,6 +157,7 @@ class Header extends Component {
             <Route path='/doctor/register' component={DocRegister} />
             <Route path='/doctor/onboarding' component={DocOnBoarding} />
             <Route exact path='/doctor/profile' component={DoctorProfile} />
+            <Route exact path='/doctor/editdoctor' component={DocEdit} />
           </div>
         </Router>
       </div>

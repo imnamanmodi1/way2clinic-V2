@@ -13,6 +13,10 @@ router.get('/login', (req,res) => {
   res.render('index')
 })
 
+router.get('/editdoctor', docController.verifyToken, (req, res)=>{
+  res.render('index')
+})
+
 router.get('/logout', docController.logout, (req,res) => {
   console.log('render index after logout')
   res.render('index')

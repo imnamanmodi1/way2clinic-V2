@@ -59,6 +59,9 @@ class DoctorProfile extends Component {
                         <br />
                         <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                     </div>
+                    <div className="control">
+                            <a href='/doctor/editdoctor' className="button is-link">Edit</a>
+                        </div>
                 </div>
             </div>
         )
