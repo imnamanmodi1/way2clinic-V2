@@ -25,7 +25,8 @@ module.exports = {
         console.log("inside authenticate")
         var email = req.body.email;
         var password = req.body.password;
-
+        console.log(email, "This is email of patient")
+        console.log(password, "This is password of patient")
         patientModel.findOne({email: email}, function(err, patientInfo){
             if(err){
                 res.json({status: 'error', message: 'user not found'});
@@ -38,7 +39,7 @@ module.exports = {
                 }
             }
         })
-    },
+    }
     
     // verifyToken: function (req, res, next) {
     //     var token = req.cookies.jwtToken;

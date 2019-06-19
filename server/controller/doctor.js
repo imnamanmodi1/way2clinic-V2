@@ -74,31 +74,37 @@ module.exports = {
       res.redirect("http://localhost:8000/")
    },
 
-   //handles authentication on login form for Doctor POST
+   //@@ For Practo Verified Doc - handles authentication on login form for Doctor POST
    authenticate: function (req, res, next) {
       // console.log(module.exports.secret)
       var password = req.body.password;
       var emails = req.body.email;
+      
+      // Simple test to see if both are supplied for Authentication
       console.log(password, 'this is password')
       console.log(emails, 'this is email')
 
+      // Find Doc in Practo DB using the EMAIL
       docModel.findOne({ email: emails }, function (err, userInfo) {
          if (err) {
-            res.json({status: "error", message: "user exists"});
+            // if
+            res.json({status: "error", message: "user doesn't exists"});
          }
          else {
             if (bcrypt.compareSync(req.body.password, userInfo.password)) {
                const token = jwt.sign({ id: userInfo._id}, module.exports.secret, { expiresIn: '1h' });
                if (!userInfo.degree || !userInfo.specialisation || !userInfo.medicalId || !userInfo.clinicAddress){
+                  // set Cookie & Headers for JWT Verification on protected routes
                   res.cookie('jwtToken', token);
                   res.header('x-auth-token', token)
+                  // redirect if any of the field in doc is missing
                   res.redirect('/doctor/onboarding')
                }
                else{
                   //do something
-                  const domain = 'localhost';
-                  res.cookie('jwtToken', token, { domain: domain, path : '/'});
-                  // res.header('x-auth-token', token)
+                  const domain = 'localhost'; //dev change to PRACTO.COM
+                  // set Cookie & Headers for JWT Verification on protected routes
+                  res.cookie('jwtToken', token, { domain: domain, path : '/'})
                   res.redirect('/');
                   console.log(userInfo.name, 'has completed onboarding')
                }
